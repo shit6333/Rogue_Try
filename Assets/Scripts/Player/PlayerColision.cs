@@ -6,7 +6,8 @@ public class PlayerColision : MonoBehaviour
 
     private void Start()
     {
-        GameManager.playerHp = Hp;  // 設定人物血量
+        GameManager.playerMaxHp = Hp;   // 設定最高血量
+        GameManager.playerHp = Hp;      // 設定人物當前血量
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
