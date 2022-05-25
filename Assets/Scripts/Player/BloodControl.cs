@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BloodControl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Image bar { get; private set; }
+    private void Start()
     {
-        
+        bar = GetComponent<Image>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        
+        // ¦å±ø±±¨î
+        if(GameManager.playerHp >= 0)
+            bar.fillAmount = (float)GameManager.playerHp / (float)GameManager.playerMaxHp ;
     }
 }

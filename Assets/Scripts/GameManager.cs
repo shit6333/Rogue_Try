@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     static public bool playCantMove = false;    // 玩家可否移動
     static public Vector2 playerDirection;      // 玩家移動方向
 
+    static public int score = 0;                // 分數
+
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");    // 取得玩家物件
@@ -19,6 +21,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         Debug.Log("Hp: " + playerHp);
+        Debug.Log("Score: " + score);
     }
 
 }
