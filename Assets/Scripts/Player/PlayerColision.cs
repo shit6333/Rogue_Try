@@ -2,13 +2,6 @@ using UnityEngine;
 
 public class PlayerColision : MonoBehaviour
 {
-    public int Hp = 10;
-
-    private void Start()
-    {
-        GameManager.playerMaxHp = Hp;   // 設定最高血量
-        GameManager.playerHp = Hp;      // 設定人物當前血量
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

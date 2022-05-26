@@ -3,7 +3,6 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 1.0f;
     public Rigidbody2D rb { get; private set; }
     public Vector2 direction { get; private set; }
 
@@ -55,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
         { 
             playerAnimator.SetInteger("RunState", 1);                    // 執行走路動畫
             Vector2 pos = new Vector2(rb.position.x, rb.position.y);
-            Vector2 moveDistance = direction * speed * Time.fixedDeltaTime;
+            Vector2 moveDistance = direction * GameManager.moveSpeed * Time.fixedDeltaTime;
             rb.MovePosition(pos + moveDistance);
         }
     }

@@ -4,7 +4,7 @@ public class Enemy : MonoBehaviour
 {
     public int enemyHp = 10;                        // 敵人血量
     public int enemyPower = 2;                     // 敵人攻擊力
-    public int score = 1;                           // 敵人提供分數
+    public float score = 1;                           // 敵人提供分數
     public float moveSpeed = 10f;                   // 移動速度
     public Animator enemyAnimator;                  // 動畫控制
     public GameObject player { get; private set; }  // Player 物件
@@ -45,6 +45,7 @@ public class Enemy : MonoBehaviour
     {
         // 加分
         GameManager.score += score;
+        GameManager.playerExp += score;
 
         // 刪除子物件
         for(int i = 0; i < gameObject.transform.childCount; i++)

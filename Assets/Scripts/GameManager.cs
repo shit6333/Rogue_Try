@@ -5,13 +5,25 @@ public class GameManager : MonoBehaviour
 {
     static public List<GameObject> enemies = new List<GameObject>();
     static public GameObject player;
-    static public int playerMaxHp = 0;
+
+    // Plyaer 基本數值
+    static public int playerMaxHp = 0;          // 最大 Hp
     static public int playerHp = 0;             // 玩家 Hp
-    static public int playerLevel = 0;          // 玩家等級
+    static public float playerShootTime = 2f;   // 玩家射擊速度 
+    static public float moveSpeed = 5f;         // 玩家移動速度
     static public bool playCantMove = false;    // 玩家可否移動
     static public Vector2 playerDirection;      // 玩家移動方向
 
-    static public int score = 0;                // 分數
+    // 等級設定
+    static public int playerLevel = 0;            // 玩家等級
+    static public float playerALevelExp = 0;      // 玩家升級所需 Exp
+    static public float levelExpMultiply = 1.2f;  // 玩家升級所需 exp 加成
+    static public float playerExp = 0;            // 玩家 Exp
+
+    // 遊玩設定
+    static public float score = 0;                // 分數
+
+    // =============================================================================================================
 
     private void Awake()
     {
@@ -20,8 +32,16 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if(playerExp >= playerALevelExp) LevelUp();
         Debug.Log("Hp: " + playerHp);
         Debug.Log("Score: " + score);
+        Debug.Log("level: " + playerLevel);
     }
 
+    void LevelUp()
+    {
+        playerLevel++;      // 升等
+        playerALevelExp *= levelExpMultiply;   // 升級所需exp加成
+        playerExp = 0;      // 經驗歸 0
+    }
 }

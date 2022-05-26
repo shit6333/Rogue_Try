@@ -2,14 +2,13 @@ using UnityEngine;
 
 public class PlayerShootingControl : MonoBehaviour
 {
-    public float shootTime = 1f;
     public GameObject bulletPrefab;
 
     // private float passTime = 0;
 
     private void Start()
     {
-        InvokeRepeating(nameof(GenerateBullet), shootTime, 1);
+        InvokeRepeating(nameof(GenerateBullet), GameManager.playerShootTime, 1);
     }
 
     private void GenerateBullet()

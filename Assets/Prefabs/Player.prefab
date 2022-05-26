@@ -116,9 +116,10 @@ GameObject:
   - component: {fileID: 8146282806991262126}
   - component: {fileID: 8146282806991262097}
   - component: {fileID: 8146282806991262096}
+  - component: {fileID: 8916788921815228351}
   - component: {fileID: 8146282806991262099}
-  - component: {fileID: 989546335}
   - component: {fileID: 1478397772}
+  - component: {fileID: 989546335}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -154,7 +155,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -189,6 +190,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.025, y: 0.1}
   m_EdgeRadius: 0
+--- !u!114 &8916788921815228351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8146282806991262098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8d0e5a25d0892448d8c54f136d87dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hp: 10
+  moveSpeed: 5
+  shootTime: 2
+  ALevelExp: 10
+  levelMultiply: 1.2
 --- !u!114 &8146282806991262099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,22 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52687315b5d20f34f927e7aac04f860f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
   playerAnimator: {fileID: 8146282806769642284}
---- !u!114 &989546335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8146282806991262098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03221d740e5bc1b498d0420fa157433e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootTime: 2
-  bulletPrefab: {fileID: 41245269903123641, guid: ef937dc1b9fae6f4484758acbedecbc4, type: 3}
 --- !u!114 &1478397772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,4 +232,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08eab50fff188a44285d57bd52c13800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 10
+--- !u!114 &989546335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8146282806991262098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03221d740e5bc1b498d0420fa157433e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 41245269903123641, guid: ef937dc1b9fae6f4484758acbedecbc4, type: 3}
