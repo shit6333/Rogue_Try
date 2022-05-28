@@ -32,10 +32,12 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        // ¤É¯Å
         if(playerExp >= playerALevelExp) LevelUp();
-        Debug.Log("Hp: " + playerHp);
-        Debug.Log("Score: " + score);
-        Debug.Log("level: " + playerLevel);
+        // Debug.Log("Hp: " + playerHp);
+        // Debug.Log("Score: " + score);
+        // Debug.Log("level: " + playerLevel);
+        Debug.Log("Shoot Time: " + playerShootTime);
     }
 
     void LevelUp()

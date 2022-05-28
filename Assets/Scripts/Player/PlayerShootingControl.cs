@@ -8,7 +8,7 @@ public class PlayerShootingControl : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating(nameof(GenerateBullet), GameManager.playerShootTime, 1);
+        InvokeRepeating(nameof(GenerateBullet), 0.5f, GameManager.playerShootTime);
     }
 
     private void GenerateBullet()

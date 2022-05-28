@@ -9,7 +9,7 @@ public class BloodControl : MonoBehaviour
         bar = GetComponent<Image>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         // ¦å±ø±±¨î
         if(GameManager.playerHp >= 0)

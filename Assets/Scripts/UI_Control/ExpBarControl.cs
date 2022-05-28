@@ -9,7 +9,7 @@ public class ExpBarControl : MonoBehaviour
         bar = GetComponent<Image>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         // ¸gÅç±ø±±¨î
         if(GameManager.playerLevel >= 0)
