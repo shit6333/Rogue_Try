@@ -2249,6 +2249,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8086830455671755625, guid: f83deb42040434747a474e08e8895d25, type: 3}
+      propertyPath: spawnTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086830455671755625, guid: f83deb42040434747a474e08e8895d25, type: 3}
+      propertyPath: generateAmount
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8086830455671755630, guid: f83deb42040434747a474e08e8895d25, type: 3}
       propertyPath: m_Name
       value: Spawn Point (1)
@@ -3094,6 +3102,14 @@ PrefabInstance:
     - target: {fileID: 8086830455671755624, guid: f83deb42040434747a474e08e8895d25, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086830455671755625, guid: f83deb42040434747a474e08e8895d25, type: 3}
+      propertyPath: spawnTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086830455671755625, guid: f83deb42040434747a474e08e8895d25, type: 3}
+      propertyPath: generateAmount
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8086830455671755630, guid: f83deb42040434747a474e08e8895d25, type: 3}
       propertyPath: m_Name
