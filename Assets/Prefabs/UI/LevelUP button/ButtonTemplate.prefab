@@ -66,7 +66,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Shooting Speed  Up '
+  m_text: 'Default
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -148,7 +150,7 @@ GameObject:
   - component: {fileID: 8333947389840862449}
   - component: {fileID: 208961386920681948}
   m_Layer: 5
-  m_Name: ShootingSpeedUp Button
+  m_Name: ButtonTemplate
   m_TagString: PowerUpBtn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -234,9 +236,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.43805626, g: 0.8679245, b: 0.7598905, a: 1}
+    m_NormalColor: {r: 1, g: 0.74443215, b: 0.25943398, a: 1}
+    m_HighlightedColor: {r: 0.9528302, g: 0.60464835, b: 0.013483422, a: 1}
+    m_PressedColor: {r: 0.38327694, g: 0.8207547, b: 0.71238863, a: 1}
     m_SelectedColor: {r: 0.38848346, g: 0.8490566, b: 0.69531417, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -256,16 +258,4 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8333947389840862449}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4934928609045078132, guid: 1b6acf13d4f3c1c4aa6ddc868319fce7, type: 3}
-        m_TargetAssemblyTypeName: PowerUpSetting, Assembly-CSharp
-        m_MethodName: ShootSpeedUp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []

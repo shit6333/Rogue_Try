@@ -2191,10 +2191,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8916788921815228351, guid: 633ec799ed33408428f8d76fe9bd765a, type: 3}
-      propertyPath: shootTime
-      value: 0.1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 633ec799ed33408428f8d76fe9bd765a, type: 3}
 --- !u!4 &1196939370 stripped
@@ -2259,7 +2255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8086830455671755630, guid: f83deb42040434747a474e08e8895d25, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f83deb42040434747a474e08e8895d25, type: 3}
@@ -3105,7 +3101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8086830455671755630, guid: f83deb42040434747a474e08e8895d25, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f83deb42040434747a474e08e8895d25, type: 3}
@@ -9157,4 +9153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelUpUI: {fileID: 1389029500}
   buttons:
-  - {fileID: 208961386920681948, guid: 4dfcf9c0488166840bb68770e2f657f1, type: 3}
+  - {fileID: 5445141992793128294, guid: 507f418c9758f9e44a52a9898b6a1889, type: 3}
+  - {fileID: 4777982756836740292, guid: f61f34ceb90676644a389e3d34fb5b49, type: 3}
+  - {fileID: 8269844296824792329, guid: b93cfe9982e075644a397204d590c62d, type: 3}
+  - {fileID: 2219769229102214060, guid: d4b532bfbd12e3340982b7b4ad8d49cc, type: 3}

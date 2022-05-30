@@ -7,8 +7,8 @@ public class GameManager : MonoBehaviour
     static public GameObject player;
 
     // Plyaer 基本數值
-    static public int playerMaxHp = 0;          // 最大 Hp
-    static public int playerHp = 0;             // 玩家 Hp
+    static public float playerMaxHp = 0;          // 最大 Hp
+    static public float playerHp = 0;             // 玩家 Hp
     static public float playerShootTime = 2f;   // 玩家射擊速度 
     static public float moveSpeed = 5f;         // 玩家移動速度
     static public bool playCantMove = false;    // 玩家可否移動
@@ -34,7 +34,9 @@ public class GameManager : MonoBehaviour
     {
         // 升級
         if(playerExp >= playerALevelExp) LevelUp();
-        // Debug.Log("Hp: " + playerHp);
+        Debug.Log("Max Hp: " + playerMaxHp);
+        Debug.Log("Hp: " + playerHp);
+        Debug.Log("MoveSpeed: " + moveSpeed);
         // Debug.Log("Score: " + score);
         // Debug.Log("level: " + playerLevel);
         Debug.Log("Shoot Time: " + playerShootTime);

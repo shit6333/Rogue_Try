@@ -13,6 +13,6 @@ public class BloodControl : MonoBehaviour
     {
         // ¦å±ø±±¨î
         if(GameManager.playerHp >= 0)
-            bar.fillAmount = (float)GameManager.playerHp / (float)GameManager.playerMaxHp ;
+            bar.fillAmount = GameManager.playerHp / GameManager.playerMaxHp ;
     }
 }

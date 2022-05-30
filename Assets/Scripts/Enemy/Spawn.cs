@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Spawn : MonoBehaviour
 {
@@ -10,13 +11,22 @@ public class Spawn : MonoBehaviour
     private float generatePosX;
     private float generatePosY;
     private int prefabNum = 0;      // 生成物件數量
+    private bool isSpawn = true;   // 是否生成
 
-    private void Start()
+    private void FixedUpdate()
     {
-        InvokeRepeating(nameof(GeneratePrefab), spawnTime, 1);
+        if (isSpawn)
+        {
+            // 計時(生成間隔時間)
+            StartCoroutine("Wait");
+            // 生成敵人
+            GeneratePrefab();
+            isSpawn = false;
+        }
     }
 
     private void GeneratePrefab(){
+        // 生成隨機數量
         prefabNum = Random.Range(0,generateAmount);
 
         for (int i = 0; i < prefabNum; i++)
@@ -28,9 +38,18 @@ public class Spawn : MonoBehaviour
         }
     }
 
+    // 生成間隔時間
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(spawnTime);
+        isSpawn = true;
+    }
+
+    /*
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(transform.position, new Vector3(generateMaxRange * 2, generateMaxRange * 2, 0));
     }
+    */
 }

@@ -204,7 +204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Hp: 10
   moveSpeed: 5
-  shootTime: 2
+  shootTime: 1
   ALevelExp: 10
   levelMultiply: 1.2
 --- !u!114 &8146282806991262099
