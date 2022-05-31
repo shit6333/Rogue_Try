@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int enemyHp = 10;                        // 敵人血量
-    public int enemyPower = 2;                     // 敵人攻擊力
+    public float enemyHp = 10;                        // 敵人血量
+    public float enemyPower = 2;                     // 敵人攻擊力
     public float score = 1;                           // 敵人提供分數
     public float moveSpeed = 10f;                   // 移動速度
     public Animator enemyAnimator;                  // 動畫控制

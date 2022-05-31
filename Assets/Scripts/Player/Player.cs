@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int Hp = 10;
+    public float Hp = 10;
     public float moveSpeed = 1.0f;
     public float shootTime = 2f;
 

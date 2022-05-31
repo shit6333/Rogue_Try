@@ -45,4 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelUI: {fileID: 518483958629296007, guid: 143b1de89cfae504d8347cd03b6640f6, type: 3}
-  speedUp: 0.2
+  shootSpeedUp: 0.2
+  moveSpeedUp: 0.2
+  increaseMaxHp: 1
+  restoreHp: 1
+  powerUp: 0.3

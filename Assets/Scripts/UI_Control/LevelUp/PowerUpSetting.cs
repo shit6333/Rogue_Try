@@ -8,6 +8,8 @@ public class PowerUpSetting : MonoBehaviour
     public float moveSpeedUp = 0.2f;
     public float increaseMaxHp = 1;
     public float restoreHp = 1;
+    public float powerUp = 0.2f;
+
     public void ShootSpeedUp()
     {
         if (GameManager.playerShootTime > 0.1)
@@ -48,6 +50,11 @@ public class PowerUpSetting : MonoBehaviour
         BackToGame();
     }
 
+    public void PowerUp()
+    {
+        GameManager.playerPowerMultiply += powerUp;
+        BackToGame();
+    }
     // ===========================================================================
     // °h¥XUI
     private void BackToGame()

@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     static public float moveSpeed = 5f;         // 玩家移動速度
     static public bool playCantMove = false;    // 玩家可否移動
     static public Vector2 playerDirection;      // 玩家移動方向
+    static public float playerPowerMultiply = 1f; // 玩家攻擊力倍率
 
     // 等級設定
     static public int playerLevel = 0;            // 玩家等級
