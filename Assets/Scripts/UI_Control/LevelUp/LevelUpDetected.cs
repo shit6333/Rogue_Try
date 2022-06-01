@@ -21,13 +21,12 @@ public class LevelUpDetected : MonoBehaviour
         // 升級
         if(GameManager.playerLevel > previousLevel)
         {
-            Debug.Log("我進來了");
             // UI set Activity
             LevelUpUI.gameObject.SetActive(true);
             // 產生選擇按鈕
-            RandomGenerateBoost(new Vector3(-245, 41, 0));
+            RandomGenerateBoost(new Vector3(-170, 41, 0));
             RandomGenerateBoost(new Vector3(0, 41, 0));
-            RandomGenerateBoost(new Vector3(245, 41, 0));
+            RandomGenerateBoost(new Vector3(170, 41, 0));
 
             // 時間暫停
             if (Time.timeScale != 0) Time.timeScale = 0;

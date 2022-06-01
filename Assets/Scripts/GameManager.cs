@@ -21,6 +21,12 @@ public class GameManager : MonoBehaviour
     static public float levelExpMultiply = 1.2f;  // 玩家升級所需 exp 加成
     static public float playerExp = 0;            // 玩家 Exp
 
+    // 武器設定 
+    static public float swordRotateSpeed = 1f;
+    static public float swordLevel = 0;
+    static public float swordPower = 1f;
+    static public float bulletSpeedMultiply = 1f;   // 子彈飛行速度加乘
+
     // 遊玩設定
     static public float score = 0;                // 分數
 

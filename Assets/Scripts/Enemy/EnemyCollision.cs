@@ -16,6 +16,11 @@ public class EnemyCollision : MonoBehaviour
             enemy.enemyHp -= collision.gameObject.GetComponent<Bullet>().bulletPower;
             GameObject.Destroy(collision.gameObject);
         }
+
+        if(collision.gameObject.tag == "Sword")
+        {
+            enemy.enemyHp -= GameManager.swordPower;
+        }
     }
 
 }

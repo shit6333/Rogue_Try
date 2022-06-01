@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &6680959538094992386
+--- !u!1001 &2818100682771410716
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -25,7 +25,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 208961386920681948, guid: 4dfcf9c0488166840bb68770e2f657f1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PowerUp
+      value: SwordLevelUp
       objectReference: {fileID: 0}
     - target: {fileID: 208961386920681948, guid: 4dfcf9c0488166840bb68770e2f657f1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -37,7 +37,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1424964374194838349, guid: 4dfcf9c0488166840bb68770e2f657f1, type: 3}
       propertyPath: m_Name
-      value: Power Up Variant
+      value: SwordLevelUp Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3439437305026303877, guid: 4dfcf9c0488166840bb68770e2f657f1, type: 3}
       propertyPath: m_Pivot.x
@@ -125,7 +125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6065559195160725144, guid: 4dfcf9c0488166840bb68770e2f657f1, type: 3}
       propertyPath: m_text
-      value: 'Power Up
+      value: 'Sword Level Up
 
 '
       objectReference: {fileID: 0}

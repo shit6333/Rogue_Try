@@ -9,12 +9,20 @@ public class PowerUpSetting : MonoBehaviour
     public float increaseMaxHp = 1;
     public float restoreHp = 1;
     public float powerUp = 0.2f;
+    public float swordLengthen = 0.5f;
+    public float swordRatateSpeedUp = 1.5f;
+
+    // 可新增的物件 --------------------------------
+    public GameObject swordPrefab;
+
 
     public void ShootSpeedUp()
     {
+        GameManager.swordRotateSpeed *= swordRatateSpeedUp; // 劍旋轉速度增加
+
         if (GameManager.playerShootTime > 0.1)
         {
-            GameManager.playerShootTime -= shootSpeedUp;
+            GameManager.playerShootTime -= shootSpeedUp;  
         }
         
         if( GameManager.playerShootTime < 0.1)
@@ -55,6 +63,26 @@ public class PowerUpSetting : MonoBehaviour
         GameManager.playerPowerMultiply += powerUp;
         BackToGame();
     }
+
+    // 增加劍等級
+    public void SwordLevelUp()
+    {
+        // 劍等級為 0
+        if(GameManager.swordLevel == 0)
+        {
+            Instantiate(swordPrefab, GameManager.player.transform.position, Quaternion.identity);
+            GameManager.swordLevel++;
+        }
+        else
+        {
+            GameObject sword = GameObject.FindGameObjectWithTag("Sword");
+            sword.transform.localScale = new Vector3(1, sword.transform.localScale.y + swordLengthen, 1);
+            GameManager.swordLevel++;
+        }
+
+        BackToGame();
+    }
+
     // ===========================================================================
     // 退出UI
     private void BackToGame()

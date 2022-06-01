@@ -50,3 +50,5 @@ MonoBehaviour:
   increaseMaxHp: 1
   restoreHp: 1
   powerUp: 0.3
+  swordLengthen: 0.5
+  swordPrefab: {fileID: 5532530056398439466, guid: ce305a376e9c1154f87487bf01dd0a67, type: 3}

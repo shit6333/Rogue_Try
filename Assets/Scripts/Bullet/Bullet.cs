@@ -12,8 +12,7 @@ public class Bullet : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>(); // 子彈物件
         bulletPower *= GameManager.playerPowerMultiply;
-        // 隨機瞄準敵人
-        //target = GameManager.enemies[Random.Range(0, GameManager.enemies.Count)];
+        bulletSpeed *= GameManager.bulletSpeedMultiply;
         Shoot();
     }
 
