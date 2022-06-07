@@ -3,6 +3,9 @@ using UnityEngine;
 public class PlayerColision : MonoBehaviour
 {
 
+    // 控制動畫
+    public Animator playerAnimator;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
@@ -10,6 +13,7 @@ public class PlayerColision : MonoBehaviour
         {
             // 扣除血量
             GameManager.playerHp -= collision.gameObject.GetComponent<Enemy>().enemyPower;
+            playerAnimator.SetTrigger("hitted");
         }
 
         if (collision.gameObject.tag == "Wall")
