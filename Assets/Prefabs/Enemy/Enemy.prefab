@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHp: 10
-  enemyPower: 2
+  enemyPower: 3
   score: 5
   moveSpeed: 1
   enemyAnimator: {fileID: 956736322}
