@@ -46,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
             playerAnimator.SetInteger("RunState", 0);
         }
             
+        if(playerAnimator.GetBool("hit") == true) playerAnimator.SetBool("hit", false);
     }
 
     private void Move(Vector2 direction)

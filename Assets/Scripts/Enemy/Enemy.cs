@@ -25,6 +25,7 @@ public class Enemy : MonoBehaviour
         
         Move();
         if(enemyHp <= 0) Dead();
+        if(enemyAnimator.GetBool("hit") == true) enemyAnimator.SetBool("hit",false);
     }
 
     // --------------------------------------

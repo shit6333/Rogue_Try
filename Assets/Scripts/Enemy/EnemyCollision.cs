@@ -15,13 +15,13 @@ public class EnemyCollision : MonoBehaviour
         if (collision.gameObject.tag == "Bullet")
         {
             enemy.enemyHp -= collision.gameObject.GetComponent<Bullet>().bulletPower;
-            enemyAnimator.SetTrigger("hitted");
+            enemyAnimator.SetBool("hit",true);
             GameObject.Destroy(collision.gameObject);
         }
 
         if(collision.gameObject.tag == "Sword")
         {
-            enemyAnimator.SetTrigger("hitted");
+            enemyAnimator.SetBool("hit", true);
             enemy.enemyHp -= GameManager.swordPower;
         }
     }

@@ -13,7 +13,7 @@ public class PlayerColision : MonoBehaviour
         {
             // ¦©°£¦å¶q
             GameManager.playerHp -= collision.gameObject.GetComponent<Enemy>().enemyPower;
-            playerAnimator.SetTrigger("hitted");
+            playerAnimator.SetBool("hit",true);
         }
 
         if (collision.gameObject.tag == "Wall")
