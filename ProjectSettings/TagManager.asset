@@ -9,6 +9,7 @@ TagManager:
   - Wall
   - PowerUpBtn
   - Sword
+  - Boss
   layers:
   - Default
   - TransparentFX

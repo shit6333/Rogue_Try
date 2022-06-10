@@ -2887,6 +2887,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1668365380}
   m_CullTransparentMesh: 1
+--- !u!1 &1743575586 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1256418559296069095, guid: 172f07e890bf64a438b1c269631bad8f, type: 3}
+  m_PrefabInstance: {fileID: 1256418558540217501}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1743575592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743575586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32239497d4462fb4c88f80ad83c28449, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFlipped: 0
+--- !u!114 &1743575593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743575586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d7761e172c9e85479b1927314ad822e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: 8
+  attackRange: 2.7
+  attackOffset: {x: 1, y: -0.35, z: 0}
+  attackMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1835616770
 GameObject:
   m_ObjectHideFlags: 0
@@ -8971,6 +9007,10 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1256418559296069090, guid: 172f07e890bf64a438b1c269631bad8f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1256418559296069090, guid: 172f07e890bf64a438b1c269631bad8f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11
       objectReference: {fileID: 0}
@@ -9012,6 +9052,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1256418559296069095, guid: 172f07e890bf64a438b1c269631bad8f, type: 3}
       propertyPath: m_Name
+      value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 1256418559296069095, guid: 172f07e890bf64a438b1c269631bad8f, type: 3}
+      propertyPath: m_TagString
       value: Boss
       objectReference: {fileID: 0}
     m_RemovedComponents: []
