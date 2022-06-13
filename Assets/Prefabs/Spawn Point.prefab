@@ -47,6 +47,6 @@ MonoBehaviour:
   spawnEnemys:
   - {fileID: 601604210432956178, guid: 51a9ebbc28a50c9468323e3c15b1ca73, type: 3}
   - {fileID: 11574592755903750, guid: 1a49b98bd89cc2f4bacbc084394b0777, type: 3}
-  spawnTime: 1
-  generateAmount: 2
+  spawnTime: 1.5
+  generateMaxAmount: 2
   generateMaxRange: 0.5

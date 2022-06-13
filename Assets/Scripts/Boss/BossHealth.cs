@@ -1,18 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BossHealth : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float maxhealth = 50;
+    public float health { get; private set; }
+    public bool isInvulnerable = false; // 無敵時間
+    private void Start()
     {
-        
+        health = maxhealth;
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void TakeDamage( float damage)
     {
-        
+        if(isInvulnerable) 
+            return;
+
+        health -= damage;
+        if (health <= 0)
+        {
+            Die();
+        }
+        else if (health <= maxhealth/2)  // 進入瘋狂模式
+        {
+            if(!GetComponent<Animator>().GetBool("isAngry"))
+                GetComponent<Animator>().SetBool("isAngry", true);
+        }
+
+    }
+
+    public void Die()
+    {
+        GameObject.Destroy (gameObject);
     }
 }

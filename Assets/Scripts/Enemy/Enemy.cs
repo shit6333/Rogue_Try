@@ -48,6 +48,9 @@ public class Enemy : MonoBehaviour
         GameManager.score += score;
         GameManager.playerExp += score;
 
+        // 從 Enemy List 中移除掉第一個元素
+        GameManager.allEnemysList.RemoveAt(0);
+
         // 刪除子物件
         for(int i = 0; i < gameObject.transform.childCount; i++)
         {

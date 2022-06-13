@@ -12,6 +12,24 @@ public class Boss : MonoBehaviour
         player = GameManager.player.transform;
     }
 
+    // Collision °»´ú
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Bullet")
+        {
+            GetComponent<BossHealth>().TakeDamage(collision.gameObject.GetComponent<Bullet>().bulletPower);
+            GameObject.Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.tag == "Sword")
+        {
+            GetComponent<BossHealth>().TakeDamage(GameManager.swordPower);
+        }
+
+        Debug.Log(GetComponent<BossHealth>().health);
+    }
+
+
     public void LookAtPlayer()
     {
         Vector3 flipped = transform.localScale;

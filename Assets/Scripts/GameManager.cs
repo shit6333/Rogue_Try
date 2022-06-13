@@ -27,6 +27,11 @@ public class GameManager : MonoBehaviour
     static public float swordPower = 1f;
     static public float bulletSpeedMultiply = 1f;   // 紆︽硉
 
+    // ┣北恨
+    public int maxEnemyQuanity = 10;                // 程蔼 Enemy 计秖
+    static public List<GameObject> allEnemysList;    // Enemy List : ノㄓ暗计秖北恨
+    static public bool canSpawn = true;
+
     // 笴砞﹚
     static public float score = 0;                // だ计
 
@@ -35,18 +40,30 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");    // 眔產ン
+        allEnemysList = new List<GameObject>();
     }
 
     private void Update()
     {
         // ど
         if(playerExp >= playerALevelExp) LevelUp();
-        Debug.Log("Max Hp: " + playerMaxHp);
-        Debug.Log("Hp: " + playerHp);
-        Debug.Log("MoveSpeed: " + moveSpeed);
+        // ┣计秖北恨
+        if(allEnemysList.Count > maxEnemyQuanity) // 禬筁﹚计秖
+        {
+            canSpawn = false;        // 氨ゎネΘ enemy
+        }
+        else
+        {
+            if(!canSpawn) canSpawn = true;
+        }
+
+        //Debug.Log("Max Hp: " + playerMaxHp);
+        //Debug.Log("Hp: " + playerHp);
+        //Debug.Log("MoveSpeed: " + moveSpeed);
         // Debug.Log("Score: " + score);
         // Debug.Log("level: " + playerLevel);
-        Debug.Log("Shoot Time: " + playerShootTime);
+        //Debug.Log("Shoot Time: " + playerShootTime);
+        //Debug.Log("Enemy Quantity: " + allEnemysList.Count);
     }
 
     void LevelUp()

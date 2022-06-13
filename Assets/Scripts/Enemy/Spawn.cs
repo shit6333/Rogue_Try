@@ -31,11 +31,13 @@ public class Spawn : MonoBehaviour
             // 計時(生成間隔時間)
             StartCoroutine("Wait");
             // 生成敵人
-            GeneratePrefab();
+            if(GameManager.canSpawn)
+                GeneratePrefab();
             isSpawn = false;
         }
     }
 
+    // 生成函數
     private void GeneratePrefab(){
         // 隨機選擇要產生的 Enemy
         int enemyIndex = Random.Range(0, spawnCount);
@@ -60,8 +62,9 @@ public class Spawn : MonoBehaviour
         {
             generatePosX = Random.Range(-generateMaxRange, generateMaxRange);
             generatePosY = Random.Range(-generateMaxRange, generateMaxRange);
-            Instantiate(spawnEnemy, new Vector3( transform.position.x + generatePosX,
+            GameObject spawnPrefab =  Instantiate(spawnEnemy, new Vector3( transform.position.x + generatePosX,
                                                   transform.position.y + generatePosY, 0), Quaternion.identity);
+            GameManager.allEnemysList.Add(spawnPrefab);
         }
     }
 
@@ -72,11 +75,11 @@ public class Spawn : MonoBehaviour
         isSpawn = true;
     }
 
-    /*
+    
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(transform.position, new Vector3(generateMaxRange * 2, generateMaxRange * 2, 0));
     }
-    */
+    
 }
