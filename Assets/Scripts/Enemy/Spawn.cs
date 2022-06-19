@@ -31,7 +31,7 @@ public class Spawn : MonoBehaviour
             // 計時(生成間隔時間)
             StartCoroutine("Wait");
             // 生成敵人
-            if(GameManager.canSpawn)
+            if(GameManager.canSpawn)    // 場上敵人數量沒超過限制
                 GeneratePrefab();
             isSpawn = false;
         }
@@ -68,7 +68,7 @@ public class Spawn : MonoBehaviour
         }
     }
 
-    // 生成間隔時間
+    // 生成間隔時間 // 不須特別呼叫 !
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(spawnTime);

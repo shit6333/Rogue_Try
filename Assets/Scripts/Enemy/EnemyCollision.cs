@@ -14,15 +14,26 @@ public class EnemyCollision : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            enemy.enemyHp -= collision.gameObject.GetComponent<Bullet>().bulletPower;
-            enemyAnimator.SetBool("hit",true);
-            GameObject.Destroy(collision.gameObject);
+            // 確定本體還存在
+            if (this.gameObject != null)
+            {
+                enemy.enemyHp -= (GameManager.bulletPower * GameManager.playerPowerMultiply);
+                if (!enemyAnimator.GetBool("hit"))
+                    enemyAnimator.SetBool("hit", true);
+                GameObject.Destroy(collision.gameObject);
+            }
         }
 
         if(collision.gameObject.tag == "Sword")
         {
-            enemyAnimator.SetBool("hit", true);
-            enemy.enemyHp -= GameManager.swordPower;
+            // 確定本體還存在
+            if (this.gameObject != null)
+            {
+                if (!enemyAnimator.GetBool("hit"))
+                    enemyAnimator.SetBool("hit", true);
+                enemy.enemyHp -= GameManager.swordPower;
+            }
+
         }
     }
 

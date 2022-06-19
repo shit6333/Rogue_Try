@@ -13,6 +13,7 @@ public class BossHealth : MonoBehaviour
 
     public void TakeDamage( float damage)
     {
+        Debug.Log("Damage:" + damage);
         if(isInvulnerable) 
             return;
 
